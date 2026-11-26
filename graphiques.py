@@ -7,9 +7,9 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch, Polygon
 
-DOSSIER = "../figures/"
-df = pd.read_pickle("../resultats/simulations.pkl")
-syn = pd.read_pickle("../resultats/syntheses.pkl")
+DOSSIER = ""
+df = pd.read_pickle("simulations.pkl")
+syn = pd.read_pickle("syntheses.pkl")
 
 BLEU, ORANGE, VERT_EAU = "#257de0", "#f47230", "#00b894"
 MARINE, GRIS, GRIS_CLAIR = "#1f3b5c", "#666666", "#e6e9ef"

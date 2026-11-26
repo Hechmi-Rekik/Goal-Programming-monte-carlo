@@ -5,9 +5,9 @@ from openpyxl import load_workbook
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.utils import get_column_letter
 
-df = pd.read_pickle("../resultats/simulations.pkl")
-syn = pd.read_pickle("../resultats/syntheses.pkl")
-FICHIER = "../resultats/resultats_monte_carlo.xlsx"
+df = pd.read_pickle("simulations.pkl")
+syn = pd.read_pickle("syntheses.pkl")
+FICHIER = "resultats_monte_carlo.xlsx"
 
 lignes = {"w1": "Poids objectif 1 (w1)", "w2": "Poids objectif 2 (w2)",
           "r_star": "Rentabilité visée r*", "k_star": "Plafond Key Oil k*",

@@ -75,7 +75,7 @@ def statistiques(df, colonnes):
 
 if __name__ == "__main__":
     df = simuler(normaliser=True)
-    df.to_pickle("../resultats/simulations.pkl")
+    df.to_pickle("simulations.pkl")
 
     cols_stats = ["w1", "w2", "r_star", "k_star", "x1", "x2", "n1", "p1", "n2", "p2",
                   "Z", "rendement_%", "part_KeyOil_%"]
@@ -109,7 +109,7 @@ if __name__ == "__main__":
 
     pd.to_pickle({"stats": st, "freq_types": freq_types, "freq_sol": freq_sol,
                   "atteinte": atteinte, "corr_p": corr_p, "corr_s": corr_s,
-                  "freq_brut": freq_brut}, "../resultats/syntheses.pkl")
+                  "freq_brut": freq_brut}, "syntheses.pkl")
 
     # ---------- Affichage console ----------
     pd.set_option("display.width", 200, "display.max_columns", 20)
