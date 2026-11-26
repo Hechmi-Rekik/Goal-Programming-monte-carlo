@@ -35,7 +35,7 @@ Résolution avec `scipy.optimize.milp` (solveur HiGHS).
 
 ## Solution initiale (w₁ = 0,70 ; w₂ = 0,30 ; r* = 9 % ; k* = 60 %)
 
-![Résolution graphique](figures/fig01_resolution_graphique.png)
+![Résolution graphique](fig01_resolution_graphique.png)
 
 | Résultat | Valeur |
 |---|---|
@@ -52,11 +52,11 @@ Le modèle privilégie le respect du plafond de risque et accepte un rendement i
 Les paramètres varient **simultanément** dans chaque scénario :
 w₁ ~ U[0,50 ; 0,90] (w₂ = 1 − w₁), r* ~ U[8 % ; 10 %], k* ~ U[50 % ; 70 %].
 
-![Démarche Monte-Carlo](figures/fig02_schema_monte_carlo.png)
+![Démarche Monte-Carlo](fig02_schema_monte_carlo.png)
 
 ### Résultats
 
-![Fréquences et atteinte des objectifs](figures/fig07_frequences_atteinte.png)
+![Fréquences et atteinte des objectifs](fig07_frequences_atteinte.png)
 
 - La solution exacte (400 ; 300) n'est retrouvée que dans **0,66 %** des scénarios : les quantités sont sensibles aux paramètres.
 - Mais la **même logique de décision** (Key Oil au plafond, le reste en AGA) reste optimale dans **78,3 %** des scénarios.
@@ -65,7 +65,7 @@ w₁ ~ U[0,50 ; 0,90] (w₂ = 1 − w₁), r* ~ U[8 % ; 10 %], k* ~ U[50 % ; 70 
 
 ### Règle de basculement
 
-![Types de solution selon w1](figures/fig11_types_selon_w1.png)
+![Types de solution selon w1](fig11_types_selon_w1.png)
 
 Lorsque les deux objectifs sont en conflit, le modèle passe de « respecter le plafond de risque » à « atteindre la rentabilité » quand :
 
@@ -75,7 +75,7 @@ w1 / w2  >  25 · r* / k*
 
 Cette règle, dérivée analytiquement, concorde avec la solution du solveur dans **100 %** des scénarios en conflit. Avec les paramètres initiaux (r* = 9 %, k* = 60 %), le seuil vaut 3,75, soit une bascule pour **w₁ > 0,79**. Dans les simulations, aucun scénario ne bascule tant que w₁ reste inférieur à 0,76 environ.
 
-![Cartes de décision](figures/fig08_cartes_decision.png)
+![Cartes de décision](fig08_cartes_decision.png)
 
 ### Pourquoi normaliser les écarts ?
 
@@ -83,21 +83,20 @@ Sans normalisation, l'écart de rendement (en $ de gain) et l'écart d'investiss
 
 ## Contenu du dépôt
 
-| Dossier / fichier | Description |
+| Fichier | Description |
 |---|---|
-| `code/gp_modele.py` | Formulation et résolution du GP pondéré |
-| `code/monte_carlo.py` | 10 000 simulations, statistiques, types de solution, corrélations |
-| `code/graphiques.py` | Génération des 11 figures |
-| `code/export_excel.py` | Export de la matrice 17 × 10 000 et des synthèses |
-| `resultats/` | Solution initiale, sortie console, classeur Excel des résultats |
-| `figures/` | Toutes les figures du rapport |
+| `gp_modele.py` | Formulation et résolution du GP pondéré |
+| `monte_carlo.py` | 10 000 simulations, statistiques, types de solution, corrélations |
+| `graphiques.py` | Génération des 11 figures (`fig01` à `fig11`) |
+| `export_excel.py` | Export de la matrice 17 × 10 000 et des synthèses |
+| `resultats_monte_carlo.xlsx` | Classeur Excel des résultats |
+| `solution_initiale.txt`, `sortie_console_monte_carlo.txt` | Sorties du modèle initial et de la simulation |
 | `Rapport_GP_Monte_Carlo.pdf` | Rapport complet |
 
 ## Reproduire
 
 ```bash
 pip install -r requirements.txt
-cd code
 python gp_modele.py      # modèle initial
 python monte_carlo.py    # 10 000 simulations (graine 2026)
 python graphiques.py     # figures
