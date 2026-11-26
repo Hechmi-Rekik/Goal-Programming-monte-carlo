@@ -1,0 +1,36 @@
+==============================================================
+Modèle GP pondéré initial (déviations normalisées)
+==============================================================
+Paramètres : w1 = 0.70 | w2 = 0.30 | r* = 9% | k* = 60%
+--------------------------------------------------------------
+x1 (AGA Products)  =      400 actions  ->    20,000 $
+x2 (Key Oil)       =      300 actions  ->    30,000 $
+Capital investi    =    50,000 $
+Rendement annuel   =     4,200 $  (8.40 %)
+Part Key Oil       = 60.00 % du capital
+--------------------------------------------------------------
+n1   =     300.00
+p1   =       0.00
+n2   =       0.00
+p2   =       0.00
+Z*   = 4.6667
+Objectif 1 (rentabilité) atteint : non
+Objectif 2 (risque) atteint      : oui
+==============================================================
+Variante : déviations non normalisées (en $)
+==============================================================
+Paramètres : w1 = 0.70 | w2 = 0.30 | r* = 9% | k* = 60%
+--------------------------------------------------------------
+x1 (AGA Products)  =      400 actions  ->    20,000 $
+x2 (Key Oil)       =      300 actions  ->    30,000 $
+Capital investi    =    50,000 $
+Rendement annuel   =     4,200 $  (8.40 %)
+Part Key Oil       = 60.00 % du capital
+--------------------------------------------------------------
+n1   =     300.00
+p1   =       0.00
+n2   =       0.00
+p2   =       0.00
+Z*   = 210.0000
+Objectif 1 (rentabilité) atteint : non
+Objectif 2 (risque) atteint      : oui

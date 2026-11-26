@@ -1,0 +1,72 @@
+
+Statistiques descriptives
+                  Moyenne  Écart-type    CV (%)   Minimum        Q1   Médiane        Q3     Maximum       IQR
+w1                0.7021      0.1153   16.4182    0.5001    0.6025    0.7025    0.8011      0.9000    0.1986
+w2                0.2979      0.1153   38.7039    0.1000    0.1989    0.2975    0.3975      0.4999    0.1986
+r_star            0.0899      0.0057    6.3747    0.0800    0.0851    0.0899    0.0949      0.1000    0.0098
+k_star            0.5990      0.0580    9.6894    0.5001    0.5484    0.5990    0.6488      0.7000    0.1004
+x1              350.9031    111.9986   31.9172    0.0496  303.9783  369.0239  437.1387    499.9346  133.1604
+x2              320.2242     54.5548   17.0364  250.0327  280.2792  311.2751  340.0241    499.9752   59.7448
+n1              242.2367    278.5491  114.9905    0.0000    0.0000  120.2812  461.6922    988.9081  461.6922
+p1                0.0000      0.0000       NaN    0.0000    0.0000    0.0000    0.0000      0.0000    0.0000
+n2                0.0000      0.0000       NaN    0.0000    0.0000    0.0000    0.0000      0.0000    0.0000
+p2             2070.5959   4818.6746  232.7192    0.0000    0.0000    0.0000    0.0000  24289.6166    0.0000
+Z                 4.4101      3.7325   84.6347    0.0000    0.7745    4.0076    7.2610     15.8308    6.4865
+rendement_%       8.5099      0.4524    5.3166    8.0003    8.1780    8.3970    8.6738      9.9998    0.4959
+part_KeyOil_%    64.0448     10.9110   17.0364   50.0065   56.0558   62.2550   68.0048     99.9950   11.9490
+
+Types de solutions
+                                                     Effectif  Fréquence (%)
+type                                                                       
+S1 : plafond Key Oil respecté, rentabilité insu...      5844          58.44
+S2 : rentabilité atteinte, plafond Key Oil dépassé      2166          21.66
+S3 : deux objectifs atteints                            1990          19.90
+
+10 solutions les plus fréquentes
+       x1     x2  Effectif  Fréquence (%)
+0  496.0  252.0        53           0.53
+1  452.0  274.0        50           0.50
+2  478.0  261.0        48           0.48
+3  472.0  264.0        48           0.48
+4  480.0  260.0        47           0.47
+5  482.0  259.0        45           0.45
+6  412.0  294.0        44           0.44
+7  490.0  255.0        44           0.44
+8  396.0  302.0        44           0.44
+9  494.0  253.0        44           0.44
+
+Nombre de solutions distinctes : 2418
+Solution initiale exacte (400, 300) : 66 (0.66%)
+Solution à ±5 % de l'initiale      : 1392 (13.92%)
+Solution à ±10 % de l'initiale     : 2905
+Même structure que l'initiale (S1/S3): 7834
+
+Atteinte des objectifs
+                           Effectif  Pourcentage (%)
+Objectif 1 (rentabilité)      4156            41.56
+Objectif 2 (risque)           7834            78.34
+Les deux objectifs            1990            19.90
+Aucun objectif                   0             0.00
+
+Corrélations de Pearson
+            x1     x2     n1     p2      Z  rendement_%
+w1     -0.470  0.485 -0.372  0.553  0.055        0.473
+w2      0.470 -0.485  0.372 -0.553 -0.055       -0.473
+r_star -0.167  0.281  0.680  0.321  0.879        0.430
+k_star -0.527  0.473 -0.294 -0.067 -0.378        0.357
+
+Corrélations de Spearman
+            x1     x2     n1     p2      Z  rendement_%
+w1     -0.407  0.405 -0.463  0.657  0.039        0.367
+w2      0.407 -0.405  0.463 -0.657 -0.039       -0.367
+r_star -0.048  0.153  0.614  0.194  0.897        0.391
+k_star -0.703  0.705 -0.282 -0.029 -0.373        0.552
+
+Scénarios en conflit : 8010
+Concordance règle théorique / simulation : 1.0
+
+Variante non normalisée
+                                                     Effectif  Fréquence (%)
+type                                                                       
+S1 : plafond Key Oil respecté, rentabilité insu...      8010           80.1
+S3 : deux objectifs atteints                            1990           19.9
